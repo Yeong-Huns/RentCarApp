@@ -1,4 +1,4 @@
-package com.oracle.rent.member;
+package com.oracle.rent.member.domain;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -26,6 +26,7 @@ public class Member {
     }
     @Builder
     public Member(String id, String password, String name, String address, String phoneNum) {
+        System.out.println("회원 가입합니다. ");
         this.id = id;
         this.password = password;
         this.name = name;
@@ -44,14 +45,6 @@ public class Member {
 
     }
 
-    public void regMember(String id, String password, String name, String address, String phoneNum){
-        System.out.println("회원 가입합니다. ");
-        this.id = id;
-        this.password = password;
-        this.name = name;
-        this.address = address;
-        this.phoneNum = phoneNum;
-    }
     // 회원 정보 수정
     public void modMember(){
         System.out.println("\n회원 정보를 수정합니다.");
