@@ -1,4 +1,4 @@
-package com.oracle.rent.res;
+package com.oracle.rent.res.domain;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -30,13 +30,13 @@ public class Reserve {
                    String resDate,
                    String useBeginDate,
                    String useEndDate) {
+        System.out.println("차 예약 정보를 등록합니다.");
         this.resNumber = resNumber;
         this.resCarNumber = resCarNumber;
         this.resDate = resDate;
         this.useBeginDate = useBeginDate;
         this.useEndDate = useEndDate;
     }
-
     //차 예약 정보 조회 기능
     public String checkResInfo(){
         System.out.println("\n차 예약 정보를 조회합니다.");
@@ -46,19 +46,6 @@ public class Reserve {
                 +"\n예약일자: "+ resDate
                 +"\n차 사용 시작 일자: "+ useBeginDate
                 +"\n차 반납 예정 일자: "+ useEndDate;
-    }
-
-    public void resCar(String resNumber,
-                       String resCarNumber,
-                       String resDate,
-                       String useBeginDate,
-                       String useEndDate){
-        System.out.println("차 예약 정보를 등록합니다.");
-        this.resNumber = resNumber;
-        this.resCarNumber= resCarNumber;
-        this.resDate= resDate;
-        this.useBeginDate = useBeginDate;
-        this.useEndDate = useEndDate;
     }
 
     public void modResInfo(){
