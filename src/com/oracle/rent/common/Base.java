@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter;
  * -----------------------------------------------------------
  * 2024-04-08        Yeong-Huns       최초 생성
  */
-public class Base {
+public abstract class Base {
     public void displayData(String data){
         System.out.println("조회한 데이터는 " + data + "입니다. ");
     }

@@ -1,5 +1,6 @@
 package com.oracle.rent.car.domain;
 
+import com.oracle.rent.common.Base;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -15,7 +16,7 @@ import lombok.Getter;
  * 2024-04-04        Yeong-Huns       최초 생성
  */
 @Getter
-public class Car {
+public class Car extends Base {
     private String carNumber;
     private String carName;
     private String carColor;
@@ -24,7 +25,8 @@ public class Car {
 
     @Builder
     public Car(String carNumber, String carName, String carColor, int carSize, String carMaker) {
-        System.out.println("차 정보를 등록합니다. ");
+        System.out.println("\n차 정보를 등록합니다. ");
+        System.out.println("차량 등록 시간 : " + showTime());
         this.carNumber = carNumber;
         this.carName = carName;
         this.carColor = carColor;
@@ -34,6 +36,7 @@ public class Car {
 
     public String checkCarInfo(){
         System.out.println("\n렌터카 정보를 조회합니다.");
+        System.out.println("렌터카 조회 시간 : " + showTime());
         System.out.println("-----------------------");
         return "차 번호: " + carNumber
                 +"\n차 이름: " + carName
@@ -44,8 +47,10 @@ public class Car {
 
     public void modCarInfo(){
         System.out.println("\n렌터카 정보를 수정합니다. ");
+        System.out.println("렌터카 정보 수정 시간 : " + showTime());
     }
     public void delCarInfo(){
         System.out.println("\n렌터카 정보를 삭제합니다.");
+        System.out.println("렌터카 정보 삭제 시간 : " + showTime());
     }
 }

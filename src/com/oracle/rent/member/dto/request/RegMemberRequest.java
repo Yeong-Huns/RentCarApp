@@ -1,4 +1,4 @@
-package com.oracle.rent.member.dto;
+package com.oracle.rent.member.dto.request;
 
 import com.oracle.rent.member.domain.Member;
 
