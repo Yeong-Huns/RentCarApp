@@ -49,14 +49,7 @@ public class Member extends Base {
     }
 
     // 회원 정보 수정
-    public void modMember(){
-        System.out.println("\n회원 정보를 수정합니다.");
-        System.out.println("회원 수정 시간 : " + showTime());
-    }
 
-    public void delMember(){
-        System.out.println("\n회원 정보를 삭제합니다.");
-        System.out.println("회원 삭제 시간: " + showTime());
-    }
+
 
 }

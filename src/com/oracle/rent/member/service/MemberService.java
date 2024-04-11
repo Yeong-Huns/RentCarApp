@@ -1,5 +1,8 @@
 package com.oracle.rent.member.service;
 
+import com.oracle.rent.member.dto.request.RegMemberRequest;
+import com.oracle.rent.member.repository.MemberRepository;
+
 /**
  * packageName    : com.oracle.rent.member.service
  * fileName       : MemberService
@@ -12,12 +15,28 @@ package com.oracle.rent.member.service;
  * 2024-04-10        Yeong-Huns       최초 생성
  */
 public class MemberService {
-    private static MemberService instance = null;
-    private MemberService() {}
+    private final MemberRepository memberRepository;
+    private static MemberService instance;
     public static MemberService getInstance() {
         if (instance == null) {
-            return new MemberService();
+            instance = new MemberService();
+            return instance;
         }
         return instance;
+    }
+    private MemberService() {
+        memberRepository = new MemberRepository();
+    }
+    public void saveMember(RegMemberRequest request){
+        memberRepository.save(request.toEntity());
+    }
+    public void viewMember(){
+
+    }
+    public void modMember(){
+
+    }
+    public void delMember(){
+
     }
 }
